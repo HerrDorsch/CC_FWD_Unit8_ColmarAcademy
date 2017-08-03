@@ -1,6 +1,48 @@
 /* --- base settings --- */
+html {
+  /* --- REMOVE FROM FINAL STYLE SHEET! --- */
+  /* debug marker */
+  border: 1px solid red;
+
+  /* which font? at least 3 weights req'd, light, regular, bold! */
+  font-family: sans-serif;
+}
+
 
 /* --- header ( breadcrumb / navbar ) --- */
+header {
+  display: flex;
+  justify-content: space-between;
+
+  height: 64px;
+}
+
+#logo {
+  /* debug marker */
+  border: 1px solid red;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-left: 24px;
+}
+
+nav {
+  /* debug marker */
+  border: 1px solid red;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-right: 24px;
+}
+
+nav li {
+  display: inline;
+  padding: 8px;
+}
 
 /* --- main section --- */
 
