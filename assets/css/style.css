@@ -5,9 +5,15 @@ html {
   border: 1px solid red;
 
   /* which font? at least 3 weights req'd, light, regular, bold! */
-  font-family: sans-serif;
+  /* let's start with Open Sans from local setup -- TODO: integrate with google fonts api! */
+  font-family: "Open Sans"; sans-serif;
+  /* --- grey text color --- */
+  color: #4A4A4A;
 }
 
+  /* --- open sans bold and light --- maybe refator later... --- */
+  .os_bold { font-weight: 700; }
+  .os_light { font-weight: 300; }
 
 /* --- header ( breadcrumb / navbar ) --- */
 header {
@@ -17,6 +23,7 @@ header {
   height: 64px;
 }
 
+/* --- LOGO --- */
 #logo {
   /* debug marker */
   border: 1px solid red;
@@ -26,8 +33,11 @@ header {
   align-items: center;
 
   margin-left: 24px;
+  text-transform: uppercase;
+  color: #262626
 }
 
+/* --- NAVIGATION --- */
 nav {
   /* debug marker */
   border: 1px solid red;
@@ -44,7 +54,49 @@ nav li {
   padding: 8px;
 }
 
+nav a {
+  text-decoration: none;
+  color: #4A4A4A;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+nav .icon {
+  vertical-align: middle;
+}
+
+/* --- responsive variation of nav bar --- START --- */
+/*@media only screen and (max-width: 480px) {*/
+@media only screen and (max-width: 840px) {
+
+  /*konzept wird unrund...*/
+  #logo { width: 25%; }
+  nav {
+    width: 75%;
+    justify-content: center;
+  }
+  /*konzept wird unrund...*/
+
+
+  span.icon { display:inline-block; }
+  span.text { display:none; }
+	}
+/*@media only screen and (min-width: 481px) {*/
+@media only screen and (min-width: 841px) {
+  span.icon { display:none; }
+  span.text { display:inline-block; }
+  }
+/* --- responsive variation of nav bar --- END --- */
+
+
+
+
 /* --- main section --- */
+.greybackground {
+  background-color: #D8D8D8;
+}
 
 /* --- section intro ( learn something new everyday ) --- */
 
