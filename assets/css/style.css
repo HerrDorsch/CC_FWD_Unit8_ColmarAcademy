@@ -1,4 +1,4 @@
-/* --- base settings --- */
+/* --- BASE SETTINGS ------------------------------------------------------------------------------ */
 html {
   /* --- REMOVE FROM FINAL STYLE SHEET! --- */
   /* debug marker */
@@ -15,7 +15,7 @@ html {
   .os_bold { font-weight: 700; }
   .os_light { font-weight: 300; }
 
-/* --- header ( breadcrumb / navbar ) --- */
+/* --- HEADER ( BREADCRUMB / NAVBAR ) ------------------------------------------------------------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@ header {
   height: 64px;
 }
 
-/* --- LOGO --- */
+/* --- logo --- */
 #logo {
   /* debug marker */
   border: 1px solid red;
@@ -37,7 +37,7 @@ header {
   color: #262626
 }
 
-/* --- NAVIGATION --- */
+/* --- navigation --- */
 nav {
   /* debug marker */
   border: 1px solid red;
@@ -47,6 +47,7 @@ nav {
   align-items: center;
 
   margin-right: 24px;
+  margin-left: 24px;
 }
 
 nav li {
@@ -63,47 +64,54 @@ nav a:hover {
   color: blue;
 }
 
-nav .icon {
-  vertical-align: middle;
-}
-
-/* --- responsive variation of nav bar --- START --- */
-/*@media only screen and (max-width: 480px) {*/
-@media only screen and (max-width: 840px) {
-
-  /*konzept wird unrund...*/
-  #logo { width: 25%; }
-  nav {
-    width: 75%;
-    justify-content: center;
+.mobile, .mobile nav, .mobile ul, .desktop {
+  display: flex;
+  width: 100%;
   }
-  /*konzept wird unrund...*/
-
-
-  span.icon { display:inline-block; }
-  span.text { display:none; }
-	}
-/*@media only screen and (min-width: 481px) {*/
-@media only screen and (min-width: 841px) {
-  span.icon { display:none; }
-  span.text { display:inline-block; }
+.mobile, .desktop {
+  justify-content: space-between;
   }
-/* --- responsive variation of nav bar --- END --- */
+.mobile ul {
+  justify-content: space-around;
+  align-content: center;
+  }
+.mobile nav {
+  margin: 0px;
+  }
 
-
-
-
-/* --- main section --- */
+/* --- MAIN SECTION ------------------------------------------------------------------------------- */
 .greybackground {
   background-color: #D8D8D8;
 }
 
-/* --- section intro ( learn something new everyday ) --- */
+/* --- SECTION INTRO ( learn something new everyday ) --------------------------------------------- */
 
-/* --- section wwww ( why, when, where, who )  --- */
+/* --- SECTION WWWW ( why, when, where, who )  ---------------------------------------------------- */
 
-/* --- section start ( start learning ) --- */
+/* --- SECTION START ( start learning ) ----------------------------------------------------------- */
 
-/* --- section video ( thesis exhibits ) --- */
+/* --- SECTION VIDEO ( thesis exhibits ) ---------------------------------------------------------- */
 
-/* --- footer --- */
+/* --- FOOTER ------------------------------------------------------------------------------------- */
+
+
+
+/* --- RESPONSIVE BREAKS -------------------------------------------------------------------------- */
+
+/* --- navigation -------------------------------------------------------- START --- */
+
+
+
+/*@media only screen and (max-width: 480px) {*/
+@media only screen and (max-width: 840px) {
+  div.desktop {
+    display: none;
+   }
+	}
+/*@media only screen and (min-width: 481px) {*/
+@media only screen and (min-width: 841px) {
+  div.mobile {
+    display: none;
+   }
+  }
+/* --- navigation ---------------------------------------------------------- END --- */
