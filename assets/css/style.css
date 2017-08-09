@@ -60,8 +60,12 @@ nav a {
   color: #4A4A4A;
 }
 
-nav a:hover {
-  color: blue;
+/*nav a:hover {
+  color: orange;
+}*/
+nav li:hover {
+  color: orange;
+  border-bottom: 4px solid orange;
 }
 
 .mobile, .mobile nav, .mobile ul, .desktop {
